@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Celebration | Megha & Sonal - Southern Plaza Hotel</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #fffdf5;
+      color: #4a0e17;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      padding: 24px 14px;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .wrapper { width: 100%; max-width: 620px; margin: 0 auto; }
+
+    /* Festive Header */
+    .header-card {
+      background: #ffffff;
+      border: 2px solid #eab308;
+      border-top: 6px solid #b91c1c;
+      border-radius: 18px;
+      padding: 26px 18px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(234, 179, 8, 0.15);
+      margin-bottom: 20px;
+    }
+    .top-symbols { font-size: 1.6rem; margin-bottom: 6px; }
+    .couple-names {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: #991b1b;
+      margin: 4px 0;
+    }
+    .event-date {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #b45309;
+      margin-top: 4px;
+    }
+    .divider { color: #d97706; margin-top: 8px; font-size: 1.1rem; }
+
+    /* Welcome Card */
+    .welcome-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 1px solid #fef08a;
+      border-left: 5px solid #b91c1c;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+    .welcome-title { font-size: 1.15rem; font-weight: 800; color: #991b1b; margin-bottom: 6px; }
+    .welcome-text { font-size: 0.92rem; color: #451a03; margin-bottom: 8px; }
+    .family-regards { font-weight: 800; color: #b45309; font-size: 0.92rem; margin-top: 8px; }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #991b1b;
+      margin: 22px 0 10px 4px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Cards */
+    .card {
+      background: #ffffff;
+      border: 1px solid #fef08a;
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 14px rgba(180, 83, 9, 0.06);
+    }
+    .highlight-card {
+      border: 1.5px solid #eab308;
+      background: linear-gradient(180deg, #fffef9 0%, #ffffff 100%);
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+      margin-bottom: 8px;
+    }
+    .venue-name { font-size: 1.2rem; font-weight: 800; color: #991b1b; margin-bottom: 4px; }
+    .venue-address { font-size: 0.9rem; color: #573a08; margin-bottom: 14px; }
+
+    /* Map Button */
+    .map-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 11px 16px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(180, 83, 9, 0.2);
+    }
+
+    /* Contacts Grid */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media (max-width: 500px) { .grid-2 { grid-template-columns: 1fr; } }
+    .contact-card {
+      background: #fffdf5;
+      border: 1px solid #fef08a;
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+    }
+    .c-name { font-size: 1rem; font-weight: 800; color: #991b1b; margin-bottom: 2px; }
+    .c-role { font-size: 0.76rem; font-weight: 700; color: #b45309; margin-bottom: 10px; }
+    .btn-group { display: flex; gap: 6px; justify-content: center; }
+    .btn-call, .btn-wa {
+      flex: 1;
+      padding: 8px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    .btn-call { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .btn-wa { background: #16a34a; color: #ffffff; }
+
+    /* Timeline Table */
+    .timeline { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    .timeline th {
+      text-align: left;
+      padding: 9px 10px;
+      background: #fef3c7;
+      color: #991b1b;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 800;
+      border-bottom: 1px solid #fde68a;
+    }
+    .timeline td { padding: 9px 10px; border-bottom: 1px solid #fef3c7; }
+    .timeline tr:last-child td { border-bottom: none; }
+    .t-date { color: #b45309; font-weight: 700; white-space: nowrap; }
+    .t-event { color: #4a0e17; font-weight: 600; }
+    .t-time { color: #78350f; font-weight: 500; }
+
+    /* Info Items */
+    .info-item {
+      font-size: 0.86rem;
+      color: #451a03;
+      padding: 10px 0;
+      border-bottom: 1px dashed #fef08a;
+    }
+    .info-item strong { color: #991b1b; }
+    .info-item:last-child { border-bottom: none; }
+
+    /* Footer */
+    .footer {
+      background: #ffffff;
+      border: 1px solid #fef08a;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 22px;
+      border-bottom: 5px solid #b91c1c;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    }
+    .footer-title { font-weight: 800; color: #991b1b; font-size: 1.1rem; margin: 4px 0 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- Header -->
+    <div class="header-card">
+      <div class="top-symbols">🪔 🌸 🪔</div>
+      <h1 class="couple-names">Megha & Sonal</h1>
+      <div class="event-date">22 November 2026 • Kolkata</div>
+      <div class="divider">✦ ✤ ✦</div>
+    </div>
+
+    <!-- Welcome Card -->
+    <div class="welcome-card">
+      <div class="welcome-title">Namaste & A Heartfelt Welcome!</div>
+      <p class="welcome-text">To Our Dearest Family & Friends, welcome to the City of Joy! We are delighted that you are here to celebrate the wedding of Megha and Sonal.</p>
+      <p class="welcome-text">Your presence and blessings are our greatest treasure. For anything you need, our team is right here to assist you.</p>
+      <div class="family-regards">With lots of love & warm regards,<br>Rama & Prakash Vaidyanathan</div>
+    </div>
+
+    <!-- Hotel Location -->
+    <div class="section-title">📍 Your Stay & Gathering Location</div>
+    <div class="card highlight-card">
+      <span class="tag">Guest Stay & Gathering</span>
+      <div class="venue-name">Southern Plaza Hotel</div>
+      <div class="venue-address">73 Southern Avenue, Dr. Meghnad Saha Sarani, Kolkata – 700029</div>
+      <a href="https://share.google/grjoWYJpLZM4Rkf8c" target="_blank" rel="noopener noreferrer" class="map-btn">
+        📍 Open Hotel in Google Maps
+      </a>
+    </div>
+
+    <!-- Main Wedding Venue -->
+    <div class="section-title">🏛️ Main Wedding Venue</div>
+    <div class="card highlight-card">
+      <span class="tag">Main Wedding Venue</span>
+      <div class="venue-name">The Ballygunge Maidan by Erwin Bart</div>
+      <div class="venue-address">Gurusaday Road, Opposite Birla Museum, Ballygunge, Kolkata – 700019</div>
+      <a href="https://maps.app.goo.gl/az7LXwozrqs3drQbA" target="_blank" rel="noopener noreferrer" class="map-btn">
+        📍 Open Wedding Venue in Google Maps
+      </a>
+    </div>
+
+    <!-- Coordinator & Emergency Contacts -->
+    <div class="section-title">📞 Hotel Coordinator & Emergency Support</div>
+    <div class="grid-2">
+      <div class="contact-card">
+        <div class="c-name">Mayukh Ghosal</div>
+        <div class="c-role">Southern Plaza Coordinator</div>
+        <div class="btn-group">
+          <a href="tel:+919007121108" class="btn-call">📞 Call</a>
+          <a href="https://wa.me/919007121108" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="c-name">Rakesh</div>
+        <div class="c-role">Medical / Emergency Assistance</div>
+        <div class="btn-group">
+          <a href="tel:+919830778841" class="btn-call">📞 Call</a>
+          <a href="https://wa.me/919830778841" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wedding Programme -->
+    <div class="section-title">🗓️ Wedding Programme</div>
+    <div class="card" style="padding: 8px; overflow-x: auto;">
+      <table class="timeline">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Celebration</th>
+            <th>Time / Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="t-date">Fri, 20 Nov</td><td class="t-event">Guest arrivals & check-in*</td><td class="t-time">12 noon onwards</td></tr>
+          <tr><td class="t-date">Sat, 21 Nov</td><td class="t-event">Mehendi</td><td class="t-time">11:00 am – 2:00 pm</td></tr>
+          <tr><td class="t-date">Sat, 21 Nov</td><td class="t-event">Lunch at Wedding venue</td><td class="t-time">11 am onwards</td></tr>
+          <tr><td class="t-date">Sat, 21 Nov</td><td class="t-event">Sangeet</td><td class="t-time">7 pm</td></tr>
+          <tr><td class="t-date">Sat, 21 Nov</td><td class="t-event">Dinner at wedding venue</td><td class="t-time">8:00 pm – 10:30 pm</td></tr>
+          <tr><td class="t-date">Sun, 22 Nov</td><td class="t-event">Wedding</td><td class="t-time">Morning • 7:30 am</td></tr>
+          <tr><td class="t-date">Sun, 22 Nov</td><td class="t-event">Breakfast at wedding venue</td><td class="t-time">7:00 am – 9:30 am</td></tr>
+          <tr><td class="t-date">Sun, 22 Nov</td><td class="t-event">Lunch at wedding venue</td><td class="t-time">11:30 am – 1:30 pm</td></tr>
+          <tr><td class="t-date">Sun, 22 Nov</td><td class="t-event">Wedding Reception</td><td class="t-time">Evening • 7 pm</td></tr>
+          <tr><td class="t-date">Sun, 22 Nov</td><td class="t-event">Dinner at wedding venue</td><td class="t-time">7:00 pm – 10:30 pm</td></tr>
+          <tr><td class="t-date">Mon, 23 Nov</td><td class="t-event">Hotel check-out / departures</td><td class="t-time">11 am</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-size: 0.78rem; color: #b45309; margin: -4px 0 14px 6px;">*Depends on your arrival date</div>
+
+    <!-- Travel, Meals & Accommodation -->
+    <div class="section-title">🚗 Travel, Meals & Accommodation</div>
+    <div class="card">
+      <div class="info-item"><strong>Dedicated Function Cars:</strong> We have arranged dedicated cars for your movement between Southern Plaza Hotel and the wedding venue. Our team will keep you updated on WhatsApp regarding departure times.</div>
+      <div class="info-item"><strong>Airport & Railway Station Transfers:</strong> We request you to kindly make your own arrangements for your arrival and departure transfers from the airport / railway station to the hotel. Our team will be happy to assist in arranging a car if needed.</div>
+      <div class="info-item"><strong>Hosted Meals:</strong> Meals hosted by us are at the wedding venue as per the schedule above. Outside these timings, kindly arrange dining at the hotel or nearby restaurants.</div>
+      <div class="info-item"><strong>Your Accommodation (20–23 Nov 2026):</strong> Your stay has been arranged and taken care of. Any personal expenses such as room service, laundry, minibar, or extra nights will be payable directly by you at check-out.</div>
+    </div>
+
+    <!-- Planner Footer -->
+    <div class="footer">
+      <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; color: #b45309; font-weight: 800;">Event Coordinated by</div>
+      <div class="footer-title">Mayukh's Events & Wedding Planners</div>
+      <div style="font-size: 0.9rem; color: #451a03; margin-bottom: 6px;">
+        Contact: <a href="tel:+919007121108" style="color: #b91c1c; font-weight: 800; text-decoration: none;">9007121108</a> / <a href="tel:+919038299183" style="color: #b91c1c; font-weight: 800; text-decoration: none;">9038299183</a>
+      </div>
+      <div style="font-size: 0.85rem; color: #451a03;">
+        Email: <a href="mailto:mayukh2990@gmail.com" style="color: #991b1b; font-weight: 700; text-decoration: none;">mayukh2990@gmail.com</a>
+      </div>
+      <div style="margin-top: 12px; display: flex; justify-content: center; gap: 14px; font-size: 0.86rem;">
+        <a href="https://facebook.com/mayukhs2019" target="_blank" rel="noopener noreferrer" style="color: #b45309; font-weight: 800; text-decoration: none;">Facebook: mayukhs2019</a>
+        <span>•</span>
+        <a href="https://instagram.com/mayukhs.eventplanners" target="_blank" rel="noopener noreferrer" style="color: #b45309; font-weight: 800; text-decoration: none;">Instagram: @mayukhs.eventplanners</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
